@@ -1,0 +1,12 @@
+version: "3"
+services:
+  node:
+    build: .
+    image: node:6.10
+    volumes:
+    - ./app:/app
+    working_dir: /app
+    command: sh -c 'node server.js'
+    ports:
+      - "8080:8080"
+
